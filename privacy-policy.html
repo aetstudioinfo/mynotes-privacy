@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyNotes – Privacy Policy / Gizlilik Politikası</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --warm-bg:      #F5F0EB;
+      --warm-surface: #FFF9F4;
+      --warm-brown:   #795548;
+      --warm-dark:    #3E2723;
+      --warm-mid:     #A1887F;
+      --warm-light:   #EDE0D4;
+      --text-body:    #4E342E;
+      --text-muted:   #8D6E63;
+      --divider:      #D7C4B8;
+      --gdpr-color:   #1565C0;
+      --ccpa-color:   #2E7D32;
+      --kvkk-color:   #C62828;
+      --ump-color:    #E65100;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--warm-bg);
+      color: var(--text-body);
+      min-height: 100vh;
+    }
+
+    .lang-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--warm-brown);
+      display: flex; justify-content: center; gap: 8px;
+      padding: 10px 20px;
+      box-shadow: 0 2px 12px rgba(62,39,35,.18);
+    }
+    .lang-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 600; letter-spacing: .5px;
+      padding: 6px 22px;
+      border: 2px solid rgba(255,255,255,.35); border-radius: 999px;
+      cursor: pointer; transition: all .2s;
+      color: rgba(255,255,255,.75); background: transparent;
+    }
+    .lang-btn.active { background: #fff; color: var(--warm-brown); border-color: #fff; }
+    .lang-btn:hover:not(.active) { border-color: rgba(255,255,255,.7); color: #fff; }
+
+    header {
+      background: linear-gradient(135deg, var(--warm-dark) 0%, var(--warm-brown) 60%, var(--warm-mid) 100%);
+      color: #fff; padding: 64px 24px 56px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    header::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .app-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.3);
+      border-radius: 20px; margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center; font-size: 32px;
+    }
+    header h1 {
+      font-family: 'Lora', serif; font-size: clamp(26px,5vw,38px);
+      font-weight: 700; letter-spacing: -.3px; margin-bottom: 8px;
+    }
+    header p.subtitle { font-size: 14px; opacity: .75; font-weight: 300; letter-spacing: .4px; }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+
+    .meta-bar {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+      margin: 32px 0 28px; padding: 14px 20px;
+      background: var(--warm-surface); border-radius: 14px; border: 1px solid var(--divider);
+    }
+    .meta-bar .badge {
+      font-size: 11px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 999px; color: #fff;
+    }
+    .badge-app { background: var(--warm-brown); }
+    .badge-ver { background: var(--warm-mid); }
+    .meta-bar .date { margin-left: auto; font-size: 12px; color: var(--text-muted); }
+
+    section {
+      background: var(--warm-surface); border: 1px solid var(--divider);
+      border-radius: 16px; margin-bottom: 16px; overflow: hidden;
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 14px; padding: 20px 24px;
+      background: linear-gradient(90deg, var(--warm-light) 0%, transparent 100%);
+      border-bottom: 1px solid var(--divider);
+    }
+    .section-icon {
+      width: 36px; height: 36px; border-radius: 10px; background: var(--warm-brown);
+      display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0;
+    }
+    .icon-gdpr { background: var(--gdpr-color); }
+    .icon-ccpa { background: var(--ccpa-color); }
+    .icon-kvkk { background: var(--kvkk-color); }
+    .icon-ump  { background: var(--ump-color);  }
+
+    .section-header h2 {
+      font-family: 'Lora', serif; font-size: 17px; font-weight: 600;
+      color: var(--warm-dark); letter-spacing: -.1px;
+    }
+    .section-body { padding: 20px 24px; }
+    .section-body p, .section-body li {
+      font-size: 14.5px; line-height: 1.75; color: var(--text-body); margin-bottom: 10px;
+    }
+    .section-body li { margin-bottom: 6px; }
+    .section-body ul { padding-left: 20px; margin-bottom: 10px; }
+    .section-body p:last-child, .section-body ul:last-child { margin-bottom: 0; }
+
+    .reg-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 999px; color: #fff; margin-bottom: 14px;
+    }
+    .reg-badge.gdpr { background: var(--gdpr-color); }
+    .reg-badge.ccpa { background: var(--ccpa-color); }
+    .reg-badge.kvkk { background: var(--kvkk-color); }
+    .reg-badge.ump  { background: var(--ump-color);  }
+
+    .data-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 4px; }
+    .data-table th {
+      background: var(--warm-light); color: var(--warm-dark);
+      font-weight: 600; text-align: left; padding: 10px 14px;
+      font-size: 12px; letter-spacing: .4px; text-transform: uppercase;
+    }
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 8px 0 0; }
+    .data-table td {
+      padding: 10px 14px; border-bottom: 1px solid var(--warm-light);
+      color: var(--text-body); line-height: 1.5; vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: rgba(237,224,212,.2); }
+    .pill {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      padding: 2px 9px; border-radius: 999px;
+      background: var(--warm-light); color: var(--warm-dark);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(121,85,72,.08), rgba(161,136,127,.06));
+      border-left: 3px solid var(--warm-brown); border-radius: 0 10px 10px 0;
+      padding: 14px 18px; margin: 12px 0; font-size: 14px; line-height: 1.65;
+    }
+    .info-box {
+      border-radius: 10px; padding: 14px 18px; margin: 12px 0;
+      font-size: 14px; line-height: 1.65;
+    }
+    .info-box.gdpr { background: rgba(21,101,192,.07);  border-left: 3px solid var(--gdpr-color); }
+    .info-box.ccpa { background: rgba(46,125,50,.07);   border-left: 3px solid var(--ccpa-color); }
+    .info-box.kvkk { background: rgba(198,40,40,.07);   border-left: 3px solid var(--kvkk-color); }
+    .info-box.ump  { background: rgba(230,81,0,.07);    border-left: 3px solid var(--ump-color);  }
+
+    .contact-link {
+      display: inline-block; color: var(--warm-brown); font-weight: 600;
+      text-decoration: none; border-bottom: 1px dashed var(--warm-mid); transition: color .2s;
+    }
+    .contact-link:hover { color: var(--warm-dark); }
+
+    footer {
+      text-align: center; font-size: 12px; color: var(--text-muted);
+      padding: 32px 20px; border-top: 1px solid var(--divider); margin-top: 16px;
+    }
+    footer strong { color: var(--warm-brown); }
+
+    @media (max-width: 520px) {
+      .section-body { padding: 16px 18px; }
+      .section-header { padding: 16px 18px; }
+      .data-table th, .data-table td { padding: 8px 10px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="showLang('en',this)">🇬🇧 English</button>
+  <button class="lang-btn"        onclick="showLang('tr',this)">🇹🇷 Türkçe</button>
+</div>
+
+<header>
+  <div class="app-icon">📝</div>
+  <h1>MyNotes</h1>
+  <p class="subtitle">Privacy Policy / Gizlilik Politikası</p>
+</header>
+
+<div class="container">
+
+<!-- ════════════ ENGLISH ════════════ -->
+<div class="lang-section visible" id="section-en">
+
+  <div class="meta-bar">
+    <span class="badge badge-app">MyNotes</span>
+    <span class="badge badge-ver">v1.0.1</span>
+    <span class="date">Last Updated: March 2025</span>
+  </div>
+
+  <section>
+    <div class="section-header"><div class="section-icon">👋</div><h2>Overview</h2></div>
+    <div class="section-body">
+      <p>Thank you for using <strong>MyNotes</strong>, developed by AET Studio. This Privacy Policy explains what data the app collects, how it is used, and how we protect your personal information.</p>
+      <div class="highlight">Your privacy matters to us. We encourage you to read this policy carefully before using the app.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">📦</div><h2>Data We Collect</h2></div>
+    <div class="section-body">
+      <p>The app may process the following categories of data:</p>
+      <table class="data-table">
+        <thead><tr><th>Data Type</th><th>Purpose</th><th>Legal Basis (GDPR)</th><th>Storage</th></tr></thead>
+        <tbody>
+          <tr><td>Notes &amp; checklists</td><td>Core functionality</td><td>Contract performance</td><td><span class="pill">On device</span></td></tr>
+          <tr><td>App settings</td><td>Personalised experience</td><td>Legitimate interest</td><td><span class="pill">On device</span></td></tr>
+          <tr><td>Google Account (email, name)</td><td>Cloud backup (optional)</td><td>Consent</td><td><span class="pill">Firebase</span></td></tr>
+          <tr><td>Backed-up notes (JSON)</td><td>Cross-device sync</td><td>Consent</td><td><span class="pill">Firebase</span></td></tr>
+          <tr><td>Advertising identifier (GAID)</td><td>Ad serving</td><td>Consent (EEA/UK)</td><td><span class="pill">Google AdMob</span></td></tr>
+          <tr><td>Purchase history</td><td>Remove Ads feature</td><td>Contract performance</td><td><span class="pill">Google Play</span></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;font-size:13px;color:var(--text-muted);">* Cloud backup is entirely optional. No data is sent to our servers unless you sign in with a Google account.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🗓️</div><h2>Data Retention</h2></div>
+    <div class="section-body">
+      <table class="data-table">
+        <thead><tr><th>Data</th><th>Retention Period</th></tr></thead>
+        <tbody>
+          <tr><td>Notes &amp; settings (local)</td><td>Until you uninstall the app or clear app data</td></tr>
+          <tr><td>Cloud backup (Firebase)</td><td>Until you request deletion or delete your account</td></tr>
+          <tr><td>Advertising identifiers</td><td>Managed by Google AdMob — see Google's policy</td></tr>
+          <tr><td>Purchase records</td><td>Managed by Google Play — see Google's policy</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">You may request deletion of your cloud data at any time by emailing <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a>. We will process your request within 30 days.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-gdpr">🇪🇺</div><h2>GDPR — European Union Users</h2></div>
+    <div class="section-body">
+      <div class="reg-badge gdpr">🇪🇺 GDPR · EU / EEA / UK</div>
+      <div class="info-box gdpr">If you are located in the European Economic Area (EEA) or the United Kingdom, the General Data Protection Regulation (GDPR) applies to our processing of your personal data.</div>
+      <p><strong>Legal bases for processing:</strong></p>
+      <ul>
+        <li><strong>Consent</strong> — Cloud backup and personalised advertising. You may withdraw consent at any time.</li>
+        <li><strong>Contract performance</strong> — Core note-taking functionality and in-app purchases.</li>
+        <li><strong>Legitimate interest</strong> — App preferences and security (PIN protection).</li>
+      </ul>
+      <p><strong>Your GDPR rights:</strong></p>
+      <ul>
+        <li><strong>Right of access</strong> — Request a copy of your personal data.</li>
+        <li><strong>Right to rectification</strong> — Request correction of inaccurate data.</li>
+        <li><strong>Right to erasure</strong> — Request deletion of your data ("right to be forgotten").</li>
+        <li><strong>Right to restriction</strong> — Request that we limit processing of your data.</li>
+        <li><strong>Right to data portability</strong> — Receive your data in a machine-readable format.</li>
+        <li><strong>Right to object</strong> — Object to processing based on legitimate interest.</li>
+        <li><strong>Right to withdraw consent</strong> — Withdraw consent at any time without affecting prior processing.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-ccpa">🇺🇸</div><h2>CCPA — California Residents</h2></div>
+    <div class="section-body">
+      <div class="reg-badge ccpa">🇺🇸 CCPA · California</div>
+      <div class="info-box ccpa">If you are a California resident, the California Consumer Privacy Act (CCPA) grants you specific rights regarding your personal information.</div>
+      <p><strong>We do not sell your personal information.</strong> We do not sell, trade, or transfer your personal data to third parties for monetary or other valuable consideration.</p>
+      <p><strong>Your CCPA rights:</strong></p>
+      <ul>
+        <li><strong>Right to know</strong> — Request disclosure of the categories and specific pieces of personal information we have collected.</li>
+        <li><strong>Right to delete</strong> — Request deletion of personal information we have collected, subject to certain exceptions.</li>
+        <li><strong>Right to opt-out</strong> — As stated above, we do not sell personal information. No opt-out action is needed.</li>
+        <li><strong>Right to non-discrimination</strong> — We will not discriminate against you for exercising your CCPA rights.</li>
+      </ul>
+      <p>To submit a CCPA request, email <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> with the subject line <em>"CCPA Request"</em>. We will verify your identity and respond within 45 days.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-ump">📢</div><h2>Advertising &amp; Consent (AdMob / UMP)</h2></div>
+    <div class="section-body">
+      <div class="reg-badge ump">📢 AdMob · UMP · GDPR Compliant</div>
+      <div class="info-box ump">The free version of MyNotes displays banner ads via Google AdMob. If you are in the EEA or UK, a consent dialog (Google's User Messaging Platform — UMP) is shown before any personalised advertising data is collected.</div>
+      <p><strong>How it works:</strong></p>
+      <ul>
+        <li>On first launch in EEA/UK regions, a consent screen asks whether you agree to personalised ads.</li>
+        <li>If you consent, AdMob may use your Advertising ID (GAID) to show personalised ads.</li>
+        <li>If you decline, only non-personalised ads are shown and your GAID is not used for ad targeting.</li>
+        <li>You can update your ad preferences at any time via <em>Device Settings → Google → Ads</em>.</li>
+        <li>Purchase <strong>"Remove Ads"</strong> to permanently disable all advertisements and ad tracking.</li>
+      </ul>
+      <p>Google AdMob privacy policy: <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">☁️</div><h2>Google Firebase &amp; Cloud Backup</h2></div>
+    <div class="section-body">
+      <p>When you enable cloud backup:</p>
+      <ul>
+        <li>You authenticate with your Google account via Firebase Authentication.</li>
+        <li>Your notes are uploaded to Firebase Firestore in JSON format.</li>
+        <li>This data belongs solely to you; no other users can access it.</li>
+        <li>You can delete this data at any time by signing out or contacting us.</li>
+      </ul>
+      <p>Firebase data processing policy: <a class="contact-link" href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🔔</div><h2>Notifications &amp; Permissions</h2></div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Notification permission:</strong> Required for reminders and pinned notes.</li>
+        <li><strong>Exact alarm permission (Android 12+):</strong> Required for timed reminders.</li>
+        <li><strong>Internet access:</strong> Required for ad loading and cloud backup.</li>
+      </ul>
+      <p>These permissions are optional. Denying a permission only disables the related feature; all other functions remain unaffected.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🔐</div><h2>Data Security</h2></div>
+    <div class="section-body">
+      <ul>
+        <li>Notes are stored locally using Android DataStore.</li>
+        <li>Individual notes can be locked with a PIN protected by SHA-256 hashing.</li>
+        <li>Cloud data is secured within Firebase's infrastructure.</li>
+        <li>We do not sell or rent your data to any third parties.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🧒</div><h2>Children's Privacy</h2></div>
+    <div class="section-body">
+      <p>MyNotes is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> and we will delete it promptly.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">📋</div><h2>Changes to This Policy</h2></div>
+    <div class="section-body">
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last Updated" date above. Continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">✉️</div><h2>Contact Us</h2></div>
+    <div class="section-body">
+      <p>For any privacy-related questions or to exercise your rights:</p>
+      <p><a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></p>
+      <p style="margin-top:10px;font-size:13.5px;color:var(--text-muted);">AET Studio · Istanbul, Turkey</p>
+    </div>
+  </section>
+
+</div><!-- /section-en -->
+
+
+<!-- ════════════ TÜRKÇE ════════════ -->
+<div class="lang-section" id="section-tr">
+
+  <div class="meta-bar">
+    <span class="badge badge-app">MyNotes</span>
+    <span class="badge badge-ver">v1.0.1</span>
+    <span class="date">Son Güncelleme: Mart 2025</span>
+  </div>
+
+  <section>
+    <div class="section-header"><div class="section-icon">👋</div><h2>Genel Bakış</h2></div>
+    <div class="section-body">
+      <p>AET Studio tarafından geliştirilen <strong>MyNotes</strong> uygulamasını kullandığınız için teşekkür ederiz. Bu gizlilik politikası, uygulamanın hangi verileri topladığını, nasıl kullandığını ve kişisel bilgilerinizi nasıl koruduğumuzu açıklar.</p>
+      <div class="highlight">Kişisel verileriniz bizim için önemlidir. Uygulamayı kullanmadan önce bu politikayı dikkatlice okumanızı tavsiye ederiz.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">📦</div><h2>Toplanan Veriler</h2></div>
+    <div class="section-body">
+      <p>Uygulama aşağıdaki veri kategorilerini işleyebilir:</p>
+      <table class="data-table">
+        <thead><tr><th>Veri Türü</th><th>Amaç</th><th>Hukuki Dayanak (GDPR)</th><th>Saklama</th></tr></thead>
+        <tbody>
+          <tr><td>Notlar ve listeler</td><td>Temel uygulama işlevi</td><td>Sözleşme ifası</td><td><span class="pill">Cihazda</span></td></tr>
+          <tr><td>Uygulama ayarları</td><td>Kişiselleştirilmiş deneyim</td><td>Meşru menfaat</td><td><span class="pill">Cihazda</span></td></tr>
+          <tr><td>Google Hesabı (e-posta, ad)</td><td>Bulut yedekleme (isteğe bağlı)</td><td>Rıza</td><td><span class="pill">Firebase</span></td></tr>
+          <tr><td>Yedeklenen notlar (JSON)</td><td>Cihazlar arası senkronizasyon</td><td>Rıza</td><td><span class="pill">Firebase</span></td></tr>
+          <tr><td>Reklam tanımlayıcısı (GAID)</td><td>Reklam gösterimi</td><td>Rıza (AB/UK)</td><td><span class="pill">Google AdMob</span></td></tr>
+          <tr><td>Satın alma geçmişi</td><td>Reklam kaldırma özelliği</td><td>Sözleşme ifası</td><td><span class="pill">Google Play</span></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;font-size:13px;color:var(--text-muted);">* Bulut yedekleme tamamen isteğe bağlıdır. Google hesabıyla giriş yapmadığınız sürece hiçbir veri sunuculara iletilmez.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🗓️</div><h2>Veri Saklama Süreleri</h2></div>
+    <div class="section-body">
+      <table class="data-table">
+        <thead><tr><th>Veri</th><th>Saklama Süresi</th></tr></thead>
+        <tbody>
+          <tr><td>Notlar ve ayarlar (yerel)</td><td>Uygulamayı kaldırana veya uygulama verilerini temizleyene kadar</td></tr>
+          <tr><td>Bulut yedeği (Firebase)</td><td>Silme talebinde bulunana veya hesabınızı silene kadar</td></tr>
+          <tr><td>Reklam tanımlayıcıları</td><td>Google AdMob tarafından yönetilir</td></tr>
+          <tr><td>Satın alma kayıtları</td><td>Google Play tarafından yönetilir</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">Bulut verilerinizin silinmesini istediğinizde <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazın. Talebiniz 30 gün içinde işleme alınır.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-kvkk">🇹🇷</div><h2>KVKK — Kişisel Verilerin Korunması</h2></div>
+    <div class="section-body">
+      <div class="reg-badge kvkk">🇹🇷 KVKK · Türkiye</div>
+      <div class="info-box kvkk">Türkiye'de ikamet ediyorsanız, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki haklara sahipsiniz.</div>
+      <p><strong>Veri Sorumlusu:</strong></p>
+      <ul>
+        <li><strong>Unvan:</strong> AET Studio</li>
+        <li><strong>Adres:</strong> İstanbul, Türkiye</li>
+        <li><strong>E-posta:</strong> <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></li>
+      </ul>
+      <p><strong>KVKK Madde 11 kapsamındaki haklarınız:</strong></p>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme.</li>
+        <li>İşlenmişse buna ilişkin bilgi talep etme.</li>
+        <li>Verilerin işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme.</li>
+        <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme.</li>
+        <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme.</li>
+        <li>Kanunun 7. maddesi çerçevesinde silinmesini veya yok edilmesini isteme.</li>
+        <li>Otomatik sistemlerle aleyhinize sonuç doğuran işlemlere itiraz etme.</li>
+        <li>Kanuna aykırı işlenmesi sebebiyle zararın giderilmesini talep etme.</li>
+      </ul>
+      <p>Haklarınızı kullanmak için <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazabilirsiniz. Talebiniz en geç 30 gün içinde sonuçlandırılır. Kişisel Verileri Koruma Kurumu'na (KVKK) şikâyette bulunma hakkınız saklıdır.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-gdpr">🇪🇺</div><h2>GDPR — Avrupa Birliği Kullanıcıları</h2></div>
+    <div class="section-body">
+      <div class="reg-badge gdpr">🇪🇺 GDPR · AB / AEA / UK</div>
+      <div class="info-box gdpr">Avrupa Ekonomik Alanı (AEA) veya Birleşik Krallık'ta ikamet ediyorsanız, kişisel verilerinizin işlenmesinde Genel Veri Koruma Yönetmeliği (GDPR) uygulanır.</div>
+      <p><strong>Veri işleme hukuki dayanakları:</strong></p>
+      <ul>
+        <li><strong>Rıza</strong> — Bulut yedekleme ve kişiselleştirilmiş reklamlar. İstediğiniz zaman geri alabilirsiniz.</li>
+        <li><strong>Sözleşme ifası</strong> — Temel not alma işlevleri ve uygulama içi satın almalar.</li>
+        <li><strong>Meşru menfaat</strong> — Uygulama tercihleri ve güvenlik (PIN koruması).</li>
+      </ul>
+      <p><strong>GDPR haklarınız:</strong> Erişim, düzeltme, silme ("unutulma hakkı"), kısıtlama, taşınabilirlik, itiraz ve rızayı geri alma hakkına sahipsiniz. Talepleriniz için <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazın; 30 gün içinde yanıt veririz.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-ccpa">🇺🇸</div><h2>CCPA — Kaliforniya Kullanıcıları</h2></div>
+    <div class="section-body">
+      <div class="reg-badge ccpa">🇺🇸 CCPA · Kaliforniya</div>
+      <div class="info-box ccpa">Kaliforniya'da ikamet ediyorsanız, Kaliforniya Tüketici Gizliliği Yasası (CCPA) kapsamında ek haklara sahipsiniz.</div>
+      <p><strong>Kişisel verilerinizi satmıyoruz.</strong> Verilerinizi herhangi bir üçüncü tarafa maddi veya başka bir karşılık için satmıyor, takas etmiyor ya da devretmiyoruz.</p>
+      <p><strong>CCPA haklarınız:</strong></p>
+      <ul>
+        <li><strong>Bilme hakkı</strong> — Topladığımız verilerin kategorilerini ve içeriğini talep edebilirsiniz.</li>
+        <li><strong>Silme hakkı</strong> — Topladığımız kişisel verilerin silinmesini talep edebilirsiniz.</li>
+        <li><strong>Opt-out hakkı</strong> — Veri satışı yapmadığımızdan bu hakkı kullanmanız gerekmez.</li>
+        <li><strong>Ayrımcılığa karşı koruma</strong> — Haklarınızı kullandığınız için ayrımcılığa maruz kalmayacaksınız.</li>
+      </ul>
+      <p>Talep için <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine <em>"CCPA Talebi"</em> konusuyla yazın. Kimliğinizi doğrulayarak 45 gün içinde yanıt veririz.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon icon-ump">📢</div><h2>Reklamlar &amp; Rıza (AdMob / UMP)</h2></div>
+    <div class="section-body">
+      <div class="reg-badge ump">📢 AdMob · UMP · GDPR Uyumlu</div>
+      <div class="info-box ump">MyNotes'un ücretsiz sürümü Google AdMob aracılığıyla banner reklamlar gösterir. AB/AEA veya Birleşik Krallık'ta bulunuyorsanız, kişiselleştirilmiş reklam verisi toplanmadan önce Google'ın Kullanıcı Mesajlaşma Platformu (UMP) aracılığıyla bir rıza ekranı gösterilir.</div>
+      <p><strong>Nasıl çalışır:</strong></p>
+      <ul>
+        <li>AB/AEA/UK bölgelerinde ilk açılışta kişiselleştirilmiş reklam için rıza ekranı gösterilir.</li>
+        <li>Rıza verirseniz AdMob, reklam tanımlayıcınızı (GAID) kişiselleştirilmiş reklam için kullanabilir.</li>
+        <li>Rıza vermezseniz yalnızca kişiselleştirilmemiş reklamlar gösterilir; GAID hedefleme için kullanılmaz.</li>
+        <li>Reklam tercihlerinizi <em>Cihaz Ayarları → Google → Reklamlar</em> üzerinden istediğiniz zaman güncelleyebilirsiniz.</li>
+        <li><strong>"Reklamları Kaldır"</strong> satın alımıyla tüm reklamları ve reklam takibini kalıcı olarak devre dışı bırakabilirsiniz.</li>
+      </ul>
+      <p>Google AdMob gizlilik politikası: <a class="contact-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">☁️</div><h2>Google Firebase &amp; Bulut Yedekleme</h2></div>
+    <div class="section-body">
+      <p>Bulut yedekleme özelliğini etkinleştirdiğinizde:</p>
+      <ul>
+        <li>Firebase Authentication aracılığıyla Google hesabınızla kimlik doğrulaması yapılır.</li>
+        <li>Notlarınız JSON formatında Firebase Firestore'a yüklenir.</li>
+        <li>Bu veriler yalnızca size aittir; başka kullanıcılar erişemez.</li>
+        <li>İstediğiniz zaman çıkış yaparak veya bize yazarak verilerinizi silebilirsiniz.</li>
+      </ul>
+      <p>Firebase gizlilik politikası: <a class="contact-link" href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🔔</div><h2>Bildirimler ve İzinler</h2></div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Bildirim izni:</strong> Hatırlatıcılar ve sabitlenmiş notlar için gereklidir.</li>
+        <li><strong>Tam alarm izni (Android 12+):</strong> Zamanlı hatırlatıcılar için gereklidir.</li>
+        <li><strong>İnternet erişimi:</strong> Reklam yükleme ve bulut yedekleme için gereklidir.</li>
+      </ul>
+      <p>Bu izinler isteğe bağlıdır. İzin vermemeniz yalnızca ilgili özelliği devre dışı bırakır.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🔐</div><h2>Veri Güvenliği</h2></div>
+    <div class="section-body">
+      <ul>
+        <li>Notlarınız cihazınızda Android DataStore ile saklanır.</li>
+        <li>PIN koruması SHA-256 algoritmasıyla sağlanır.</li>
+        <li>Bulut verileri Firebase'in güvenli altyapısında tutulur.</li>
+        <li>Verilerinizi hiçbir üçüncü tarafa satmıyor veya kiralamıyoruz.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">🧒</div><h2>Çocukların Gizliliği</h2></div>
+    <div class="section-body">
+      <p>Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan kişisel veri toplamayız. Bir ebeveyn veya veli olarak çocuğunuzun bize kişisel bilgi sağladığını düşünüyorsanız <a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazın; söz konusu verileri derhal sileriz.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">📋</div><h2>Politika Değişiklikleri</h2></div>
+    <div class="section-body">
+      <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişikliklerde sayfanın üst kısmındaki "Son Güncelleme" tarihini güncelleyeceğiz. Değişikliklerin yayınlanmasından sonra uygulamayı kullanmaya devam etmeniz güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><div class="section-icon">✉️</div><h2>İletişim</h2></div>
+    <div class="section-body">
+      <p>Gizlilikle ilgili sorularınız veya haklarınızı kullanmak için:</p>
+      <p><a class="contact-link" href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></p>
+      <p style="margin-top:10px;font-size:13.5px;color:var(--text-muted);">AET Studio · İstanbul, Türkiye</p>
+    </div>
+  </section>
+
+</div><!-- /section-tr -->
+
+</div><!-- /container -->
+
+<footer>
+  <strong>MyNotes</strong> &copy; 2025 AET Studio &nbsp;·&nbsp; All rights reserved / Tüm hakları saklıdır
+</footer>
+
+<script>
+  function showLang(lang, btn) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('section-' + lang).classList.add('visible');
+    btn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
