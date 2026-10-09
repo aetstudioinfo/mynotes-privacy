@@ -1,217 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MyNotes – Privacy Policy / Gizlilik Politikası</title>
+<title>MyNotes – Gizlilik Politikası / Privacy Policy</title>
 <style>
-:root{--fg:#2b2b2b;--muted:#6b6b6b;--accent:#795548;--line:#e6ded7;--bg:#fffbf7;--card:#f5f0eb}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65;color:var(--fg);background:var(--bg)}
-main{max-width:820px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.7rem;margin:.2em 0}h2{font-size:1.2rem;margin-top:2em;padding-top:.4em;border-top:1px solid var(--line)}
-a{color:var(--accent)}.meta{color:var(--muted);font-size:.92rem}
-.lang{display:flex;gap:8px;margin:12px 0 24px}.lang a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#fff}
-.wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.94rem}
-th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
-.note{background:var(--card);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px}
-section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-size:.88rem;text-align:center}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:24px 16px;line-height:1.6;color:#2b2b2b;background:#fff}
+h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8em}hr{margin:3em 0;border:none;border-top:1px solid #ddd}
+a{color:#795548}.muted{color:#777;font-size:.9rem}
 </style>
 </head>
 <body>
-<main>
-<h1>MyNotes – Privacy Policy / Gizlilik Politikası</h1>
-<p class="meta">MyNotes v1.3.0 · Last updated / Son güncelleme: October 2026 / Ekim 2026</p>
-<nav class="lang"><a href="#en">🇬🇧 English</a><a href="#tr">🇹🇷 Türkçe</a></nav>
+<p class="muted"><a href="/">AET Studio</a> · <a href="https://play.google.com/store/apps/details?id=com.aetstudio.mynotes">MyNotes</a></p>
+<p class="muted">Son güncelleme / Last updated: 9 Ekim 2026 · <a href="#en">English</a></p>
 
-<!-- ============================== ENGLISH ============================== -->
-<section id="en" lang="en">
-<h2>📄 Overview</h2>
-<p>Thank you for using <strong>MyNotes</strong>, developed by AET Studio. This Privacy Policy explains what data the app collects, how it is used, and how we protect your personal information. Please read it carefully before using the app.</p>
+<h1>MyNotes Gizlilik Politikası</h1>
+<p>Bu politika, AET Studio tarafından geliştirilen MyNotes (com.aetstudio.mynotes) Android uygulamasının hangi verileri nasıl işlediğini açıklar.</p>
 
-<h2>📦 Data We Collect</h2>
-<div class="wrap"><table>
-<tr><th>Data</th><th>Purpose</th><th>Where it is stored</th></tr>
-<tr><td>Notes &amp; checklists</td><td>Core app functionality</td><td>On your device</td></tr>
-<tr><td>App settings</td><td>Personalised experience</td><td>On your device</td></tr>
-<tr><td>Google account email address and user ID</td><td>Cloud backup sign-in (optional)</td><td>Google Firebase Authentication</td></tr>
-<tr><td>Backed-up notes &amp; checklists</td><td>Backup and sync between your devices (optional)</td><td>Google Cloud Firestore</td></tr>
-<tr><td>Advertising ID (GAID), device information, approximate location (from IP), ad interactions</td><td>Showing and measuring ads</td><td>Google AdMob</td></tr>
-<tr><td>Purchase history</td><td>"Remove Ads" purchase</td><td>Google Play</td></tr>
-<tr><td>Photos you add to drawing notes</td><td>Showing photos in your notes</td><td>On your device only (never uploaded)</td></tr>
-</table></div>
-<p class="note">Cloud backup is entirely optional. No data is sent to our cloud unless you sign in with a Google account and use backup.</p>
+<h2>1. Cihazınızda saklanan veriler</h2>
+<p>Notlarınız, görev listeleriniz, hatırlatıcılarınız ve ayarlarınız yalnızca cihazınızda saklanır. Kilitlediğiniz notların içeriği PIN'inizden türetilen bir anahtarla şifrelenir (not başlıkları şifrelenmez).</p>
 
-<h2>⏳ Data Retention</h2>
-<div class="wrap"><table>
-<tr><th>Data</th><th>Retention</th></tr>
-<tr><td>Local data</td><td>Until you uninstall the app or clear its data</td></tr>
-<tr><td>Firebase (account &amp; backups)</td><td>Until you delete your account in the app or request deletion</td></tr>
-<tr><td>AdMob &amp; Google Play data</td><td>According to Google's policies</td></tr>
-</table></div>
-
-<h2>🗑️ Deleting Your Data</h2>
+<h2>2. Bulut yedekleme (isteğe bağlı)</h2>
+<p>Google hesabınızla giriş yapıp yedekleme özelliğini kullanırsanız şu veriler Google Firebase (Authentication ve Cloud Firestore) üzerinde saklanır:</p>
 <ul>
-<li><strong>In the app (immediate):</strong> Settings → Cloud Backup → <em>Delete account &amp; cloud data</em>. Your account and all cloud backups are permanently deleted. Notes on your device are not affected.</li>
-<li><strong>By email:</strong> write to <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> from the Google address you used in MyNotes. Requests are processed within 30 days.</li>
-<li>Details: <a href="mynotes-delete/">Account deletion page</a></li>
+<li>E-posta adresiniz ve Firebase kullanıcı kimliğiniz (hesap yönetimi için)</li>
+<li>Notlarınız ve görev listeleriniz (kilitli notların içeriği şifreli, başlıkları şifresiz)</li>
 </ul>
+<p>Bu veriler yalnızca yedekleme ve geri yükleme için kullanılır, satılmaz ve üçüncü taraflarla paylaşılmaz. Aktarım sırasında şifrelenir (HTTPS/TLS).</p>
 
-<h2>🇪🇺 GDPR – European Union Users</h2>
-<p><strong>Legal bases:</strong> consent (cloud backup, personalised advertising), performance of a contract (core functionality, purchases), legitimate interest (app preferences, security).</p>
-<p><strong>Your rights:</strong> access, rectification, erasure ("right to be forgotten"), restriction of processing, data portability, objection to processing based on legitimate interest, and withdrawal of consent at any time.</p>
-<p>Send requests to <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a>; we respond within 30 days. You may also lodge a complaint with your local data protection authority.</p>
+<h2>3. Reklamlar</h2>
+<p>Uygulama, Google AdMob aracılığıyla reklam gösterir. AdMob reklam kimliği, cihaz bilgileri, yaklaşık konum (IP adresinden) ve reklam etkileşimleri gibi verileri toplayabilir. Avrupa Ekonomik Alanı ve Birleşik Krallık'taki kullanıcılardan reklamlar gösterilmeden önce onay istenir; tercihinizi uygulamada <em>Ayarlar → Gizlilik seçenekleri</em> bölümünden değiştirebilirsiniz. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites">Google'ın verileri nasıl kullandığı</a>.</p>
 
-<h2>🇺🇸 CCPA – California Residents</h2>
-<p><strong>We do not sell your personal information.</strong> You have the right to know what personal information we collect, the right to delete it, the right to opt out of sale (not applicable, as we do not sell data) and the right to non-discrimination. Email us with the subject "CCPA Request"; we respond within 45 days after verifying your identity.</p>
+<h2>4. Uygulama içi satın alma</h2>
+<p>"Reklamları kaldır" satın alımı Google Play üzerinden yapılır. Ödeme bilgilerinizi göremeyiz veya saklamayız.</p>
 
-<h2>📢 Advertising &amp; Consent (AdMob / UMP)</h2>
+<h2>5. Verilerinizi silme</h2>
+<p>Uygulamada <em>Ayarlar → Hesabı ve bulut verilerini sil</em> seçeneğiyle hesabınızı ve buluttaki tüm yedeklerinizi anında silebilirsiniz. Uygulamaya erişiminiz yoksa <a href="mynotes-delete/">hesap silme sayfasındaki</a> adımları izleyin. Cihazdaki notlar, uygulamayı kaldırdığınızda silinir.</p>
+
+<h2>6. Çocuklar</h2>
+<p>MyNotes 13 yaşın altındaki çocuklara yönelik değildir ve bilerek onlardan veri toplamaz.</p>
+
+<h2>7. İletişim</h2>
+<p>Sorularınız için: <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></p>
+
+<hr id="en">
+
+<h1>MyNotes Privacy Policy</h1>
+<p>This policy explains how MyNotes (com.aetstudio.mynotes), an Android app by AET Studio, handles your data.</p>
+
+<h2>1. Data stored on your device</h2>
+<p>Your notes, checklists, reminders and settings are stored only on your device. The content of locked notes is encrypted with a key derived from your PIN (titles are not encrypted).</p>
+
+<h2>2. Cloud backup (optional)</h2>
+<p>If you sign in with Google and use backup, the following is stored in Google Firebase (Authentication and Cloud Firestore):</p>
 <ul>
-<li>The free version shows ads through Google AdMob.</li>
-<li>Users in the EEA, UK and other regulated regions see a consent form (Google User Messaging Platform) <strong>before any ads are requested</strong>.</li>
-<li>If you consent, your advertising ID may be used for personalised ads; if you decline, only limited (non-personalised) ads are shown.</li>
-<li>You can change your choice at any time in the app: <strong>Settings → Privacy options</strong>. You can also reset or delete your advertising ID in your device settings.</li>
-<li>The "Remove Ads" purchase turns off all ads.</li>
+<li>Your email address and Firebase user ID (for account management)</li>
+<li>Your notes and checklists (locked note content is encrypted; titles are not)</li>
 </ul>
-<p>More: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></p>
+<p>This data is used only for backup and restore. It is not sold or shared with third parties, and it is encrypted in transit (HTTPS/TLS).</p>
 
-<h2>☁️ Google Firebase &amp; Cloud Backup</h2>
-<ul>
-<li>You sign in with your Google account via Firebase Authentication. Only your email address and user ID are stored.</li>
-<li>Each note is stored as a separate record in Google Cloud Firestore under your account. For drawing notes this includes the text and the pen strokes; <strong>photos are not uploaded</strong>.</li>
-<li>If you turn on <em>Automatic daily backup</em> (Settings → Cloud Backup), your notes are backed up once a day. You can turn it off at any time.</li>
-<li><em>Export notes (file)</em> creates a file (notes and photos) in a location you choose on your device. This file is never sent to us.</li>
-<li>Security rules ensure that <strong>only you</strong> can read or write your data; no other user can access it.</li>
-<li>All data is encrypted in transit (HTTPS/TLS).</li>
-</ul>
-<p>More: <a href="https://firebase.google.com/support/privacy">Firebase privacy</a></p>
+<h2>3. Advertising</h2>
+<p>The app shows ads through Google AdMob, which may collect the advertising ID, device information, approximate location (from IP address) and ad interactions. Users in the EEA and UK are asked for consent before ads are shown and can change their choice in <em>Settings → Privacy options</em>. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses data</a>.</p>
 
-<h2>🔔 Notifications &amp; Permissions</h2>
-<ul>
-<li><strong>Notifications:</strong> reminders and notes pinned to the status bar</li>
-<li><strong>Exact alarms (Android 12+):</strong> on-time reminders (if not granted, reminders may arrive a few minutes late)</li>
-<li><strong>Run at startup:</strong> restoring your reminders after the device restarts</li>
-<li><strong>Internet:</strong> loading ads and cloud backup</li>
-<li><strong>Photos and camera:</strong> photos are chosen with the Android photo picker and taken with your camera app. MyNotes does not request access to your photo library or camera; it only receives the photos you pick or take.</li>
-<li><strong>Fingerprint / screen lock:</strong> used through Android for unlocking locked notes and the app lock. MyNotes never receives or stores your fingerprint.</li>
-</ul>
-<p>Denying a permission only disables the related feature; all other functions keep working.</p>
+<h2>4. In-app purchases</h2>
+<p>The "Remove ads" purchase is processed by Google Play. We never see or store your payment details.</p>
 
-<h2>🔒 Data Security</h2>
-<ul>
-<li>Local data is stored in Android's private app storage (DataStore).</li>
-<li><strong>Locked notes:</strong> the content of a locked note is encrypted with AES-256-GCM using a key derived from your PIN (PBKDF2). It stays encrypted on the device and in cloud backups. Note titles are not encrypted so they can be shown in lists.</li>
-<li><strong>Locked drawing notes:</strong> the PIN is required to open the note and its text is encrypted, but its photos and pen strokes are not encrypted.</li>
-<li>We do not sell or rent your data to any third parties.</li>
-</ul>
+<h2>5. Deleting your data</h2>
+<p>Use <em>Settings → Delete account &amp; cloud data</em> in the app to delete your account and all cloud backups immediately. If you can't access the app, follow the steps on the <a href="mynotes-delete/">account deletion page</a>. Notes on your device are removed when you uninstall the app.</p>
 
-<h2>👶 Children's Privacy</h2>
-<p>MyNotes is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you believe your child has provided us with personal data, contact <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> and we will delete it promptly.</p>
+<h2>6. Children</h2>
+<p>MyNotes is not directed at children under 13 and does not knowingly collect their data.</p>
 
-<h2>📝 Changes to This Policy</h2>
-<p>We may update this policy from time to time. The "Last updated" date at the top shows the latest change. Continued use of the app after changes are posted means you accept the updated policy.</p>
-
-<h2>✉️ Contact Us</h2>
-<p>Email: <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a><br>AET Studio · Istanbul, Turkey</p>
-</section>
-
-<!-- ============================== TÜRKÇE ============================== -->
-<section id="tr" lang="tr">
-<h1>MyNotes – Gizlilik Politikası</h1>
-<p class="meta">MyNotes v1.3.0 · Son güncelleme: Ekim 2026</p>
-
-<h2>📄 Genel Bakış</h2>
-<p>AET Studio tarafından geliştirilen <strong>MyNotes</strong> uygulamasını kullandığınız için teşekkür ederiz. Bu Gizlilik Politikası, uygulamanın hangi verileri topladığını, bunları nasıl kullandığını ve kişisel verilerinizi nasıl koruduğumuzu açıklar. Lütfen uygulamayı kullanmadan önce dikkatlice okuyun.</p>
-
-<h2>📦 Toplanan Veriler</h2>
-<div class="wrap"><table>
-<tr><th>Veri</th><th>Amaç</th><th>Saklandığı yer</th></tr>
-<tr><td>Notlar ve listeler</td><td>Uygulamanın temel işlevi</td><td>Cihazınızda</td></tr>
-<tr><td>Uygulama ayarları</td><td>Kişiselleştirilmiş deneyim</td><td>Cihazınızda</td></tr>
-<tr><td>Google hesabı e-posta adresi ve kullanıcı kimliği</td><td>Bulut yedekleme girişi (isteğe bağlı)</td><td>Google Firebase Authentication</td></tr>
-<tr><td>Yedeklenen notlar ve listeler</td><td>Cihazlarınız arasında yedekleme ve eşitleme (isteğe bağlı)</td><td>Google Cloud Firestore</td></tr>
-<tr><td>Reklam kimliği (GAID), cihaz bilgileri, yaklaşık konum (IP'den), reklam etkileşimleri</td><td>Reklam gösterimi ve ölçümü</td><td>Google AdMob</td></tr>
-<tr><td>Satın alma geçmişi</td><td>"Reklamları Kaldır" satın alımı</td><td>Google Play</td></tr>
-<tr><td>Çizim notlarına eklediğiniz fotoğraflar</td><td>Fotoğrafların notta gösterilmesi</td><td>Yalnızca cihazınızda (hiçbir yere yüklenmez)</td></tr>
-</table></div>
-<p class="note">Bulut yedekleme tamamen isteğe bağlıdır. Google hesabınızla giriş yapıp yedekleme kullanmadığınız sürece bulutumuza hiçbir veri gönderilmez.</p>
-
-<h2>⏳ Veri Saklama Süreleri</h2>
-<div class="wrap"><table>
-<tr><th>Veri</th><th>Saklama süresi</th></tr>
-<tr><td>Cihazdaki veriler</td><td>Uygulamayı kaldırana veya verilerini temizleyene kadar</td></tr>
-<tr><td>Firebase (hesap ve yedekler)</td><td>Hesabınızı uygulamada silene veya silme talebinde bulunana kadar</td></tr>
-<tr><td>AdMob ve Google Play verileri</td><td>Google'ın politikalarına göre</td></tr>
-</table></div>
-
-<h2>🗑️ Verilerinizi Silme</h2>
-<ul>
-<li><strong>Uygulama içinden (anında):</strong> Ayarlar → Hesap ve Yedekleme → <em>Hesabı ve bulut verilerini sil</em>. Hesabınız ve buluttaki tüm yedekleriniz kalıcı olarak silinir. Cihazınızdaki notlar etkilenmez.</li>
-<li><strong>E-posta ile:</strong> MyNotes'ta kullandığınız Google adresinden <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazın. Talepler en geç 30 gün içinde sonuçlandırılır.</li>
-<li>Ayrıntılar: <a href="mynotes-delete/">Hesap silme sayfası</a></li>
-</ul>
-
-<h2>🇹🇷 KVKK – Kişisel Verilerin Korunması</h2>
-<p><strong>Veri sorumlusu:</strong> AET Studio, İstanbul · <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></p>
-<p>KVKK Madde 11 kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucu aleyhinize bir sonuç çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>
-<p>Talebiniz en geç 30 gün içinde sonuçlandırılır. Kişisel Verileri Koruma Kurumu'na (KVKK) şikâyette bulunma hakkınız saklıdır.</p>
-
-<h2>🇪🇺 GDPR – Avrupa Birliği Kullanıcıları</h2>
-<p><strong>Hukuki dayanaklar:</strong> açık rıza (bulut yedekleme, kişiselleştirilmiş reklam), sözleşmenin ifası (temel işlevler, satın almalar), meşru menfaat (uygulama tercihleri, güvenlik).</p>
-<p><strong>Haklarınız:</strong> erişim, düzeltme, silme ("unutulma hakkı"), işlemeyi kısıtlama, veri taşınabilirliği, meşru menfaate dayalı işlemeye itiraz ve rızayı her zaman geri çekme.</p>
-
-<h2>🇺🇸 CCPA – Kaliforniya Kullanıcıları</h2>
-<p><strong>Kişisel verilerinizi satmıyoruz.</strong> Toplanan verileri öğrenme, silinmesini isteme, satıştan vazgeçme (veri satmadığımız için uygulanmaz) ve ayrımcılığa uğramama haklarına sahipsiniz. "CCPA Talebi" konulu e-posta gönderin; kimlik doğrulamasından sonra 45 gün içinde yanıtlanır.</p>
-
-<h2>📢 Reklamlar ve Rıza (AdMob / UMP)</h2>
-<ul>
-<li>Ücretsiz sürümde Google AdMob aracılığıyla reklam gösterilir.</li>
-<li>AEA, Birleşik Krallık ve diğer düzenlemeye tabi bölgelerdeki kullanıcılara <strong>reklam istenmeden önce</strong> bir rıza formu (Google User Messaging Platform) gösterilir.</li>
-<li>Rıza verirseniz reklam kimliğiniz kişiselleştirilmiş reklamlar için kullanılabilir; reddederseniz yalnızca sınırlı (kişiselleştirilmemiş) reklamlar gösterilir.</li>
-<li>Tercihinizi istediğiniz zaman uygulamada <strong>Ayarlar → Gizlilik seçenekleri</strong> bölümünden değiştirebilirsiniz. Reklam kimliğinizi cihaz ayarlarından da sıfırlayabilir veya silebilirsiniz.</li>
-<li>"Reklamları Kaldır" satın alımı tüm reklamları kapatır.</li>
-</ul>
-
-<h2>☁️ Google Firebase ve Bulut Yedekleme</h2>
-<ul>
-<li>Google hesabınızla Firebase Authentication üzerinden giriş yaparsınız. Yalnızca e-posta adresiniz ve kullanıcı kimliğiniz saklanır.</li>
-<li>Her not, hesabınız altında Google Cloud Firestore'da ayrı bir kayıt olarak saklanır. Çizim notlarında buna yazı ve kalem izleri dahildir; <strong>fotoğraflar yüklenmez</strong>.</li>
-<li><em>Otomatik günlük yedek</em> açıksa (Ayarlar → Hesap ve Yedekleme) notlarınız günde bir kez yedeklenir. İstediğiniz zaman kapatabilirsiniz.</li>
-<li><em>Notları dışa aktar (dosya)</em>, notlarınızı ve fotoğraflarınızı cihazınızda seçtiğiniz bir yere dosya olarak kaydeder. Bu dosya bize gönderilmez.</li>
-<li>Güvenlik kuralları sayesinde verilerinizi <strong>yalnızca siz</strong> okuyabilir ve yazabilirsiniz; başka hiçbir kullanıcı erişemez.</li>
-<li>Tüm veriler aktarım sırasında şifrelenir (HTTPS/TLS).</li>
-</ul>
-
-<h2>🔔 Bildirimler ve İzinler</h2>
-<ul>
-<li><strong>Bildirimler:</strong> hatırlatıcılar ve durum çubuğuna sabitlenen notlar</li>
-<li><strong>Tam zamanlı alarm (Android 12+):</strong> hatırlatıcıların tam vaktinde çalması (izin verilmezse birkaç dakika gecikebilir)</li>
-<li><strong>Açılışta çalışma:</strong> cihaz yeniden başladığında hatırlatıcıların yeniden kurulması</li>
-<li><strong>İnternet:</strong> reklam yükleme ve bulut yedekleme</li>
-<li><strong>Fotoğraf ve kamera:</strong> fotoğraflar Android fotoğraf seçicisiyle seçilir ve kamera uygulamanızla çekilir. MyNotes galerinize veya kameranıza erişim izni istemez; yalnızca seçtiğiniz ya da çektiğiniz fotoğrafı alır.</li>
-<li><strong>Parmak izi / ekran kilidi:</strong> kilitli notları ve uygulama kilidini açmak için Android üzerinden kullanılır. MyNotes parmak izinizi hiçbir zaman almaz veya saklamaz.</li>
-</ul>
-<p>Bir izni reddetmek yalnızca ilgili özelliği devre dışı bırakır; diğer tüm işlevler çalışmaya devam eder.</p>
-
-<h2>🔒 Veri Güvenliği</h2>
-<ul>
-<li>Cihazdaki veriler Android'in uygulamaya özel depolama alanında (DataStore) saklanır.</li>
-<li><strong>Kilitli notlar:</strong> kilitli notun içeriği, PIN'inizden türetilen (PBKDF2) bir anahtarla AES-256-GCM ile şifrelenir; cihazda ve bulut yedeğinde şifreli kalır. Not başlıkları listelerde görünebilmesi için şifrelenmez.</li>
-<li><strong>Kilitli çizim notları:</strong> notu açmak için PIN gerekir ve yazısı şifrelenir; fotoğrafları ve kalem izleri şifrelenmez.</li>
-<li>Verilerinizi hiçbir üçüncü tarafa satmaz veya kiralamayız.</li>
-</ul>
-
-<h2>👶 Çocukların Gizliliği</h2>
-<p>Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek kişisel veri toplamayız. Çocuğunuzun bize kişisel veri sağladığını düşünüyorsanız <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a> adresine yazın; veriler derhal silinir.</p>
-
-<h2>📝 Politika Değişiklikleri</h2>
-<p>Bu politikayı zaman zaman güncelleyebiliriz. En son değişiklik, yukarıdaki "Son güncelleme" tarihinde belirtilir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz anlamına gelir.</p>
-
-<h2>✉️ İletişim</h2>
-<p>E-posta: <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a><br>AET Studio · İstanbul, Türkiye</p>
-</section>
-
-<footer>© 2025–2026 AET Studio · All rights reserved / Tüm hakları saklıdır</footer>
-</main>
+<h2>7. Contact</h2>
+<p>Questions: <a href="mailto:aetstudioinfo@gmail.com">aetstudioinfo@gmail.com</a></p>
 </body>
 </html>
