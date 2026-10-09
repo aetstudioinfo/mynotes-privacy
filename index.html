@@ -21,7 +21,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <body>
 <main>
 <h1>MyNotes – Privacy Policy / Gizlilik Politikası</h1>
-<p class="meta">MyNotes v1.1.2 · Last updated / Son güncelleme: October 2026 / Ekim 2026</p>
+<p class="meta">MyNotes v1.3.0 · Last updated / Son güncelleme: October 2026 / Ekim 2026</p>
 <nav class="lang"><a href="#en">🇬🇧 English</a><a href="#tr">🇹🇷 Türkçe</a></nav>
 
 <!-- ============================== ENGLISH ============================== -->
@@ -38,6 +38,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <tr><td>Backed-up notes &amp; checklists</td><td>Backup and sync between your devices (optional)</td><td>Google Cloud Firestore</td></tr>
 <tr><td>Advertising ID (GAID), device information, approximate location (from IP), ad interactions</td><td>Showing and measuring ads</td><td>Google AdMob</td></tr>
 <tr><td>Purchase history</td><td>"Remove Ads" purchase</td><td>Google Play</td></tr>
+<tr><td>Photos you add to drawing notes</td><td>Showing photos in your notes</td><td>On your device only (never uploaded)</td></tr>
 </table></div>
 <p class="note">Cloud backup is entirely optional. No data is sent to our cloud unless you sign in with a Google account and use backup.</p>
 
@@ -77,7 +78,9 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <h2>☁️ Google Firebase &amp; Cloud Backup</h2>
 <ul>
 <li>You sign in with your Google account via Firebase Authentication. Only your email address and user ID are stored.</li>
-<li>Each note is stored as a separate record in Google Cloud Firestore under your account.</li>
+<li>Each note is stored as a separate record in Google Cloud Firestore under your account. For drawing notes this includes the text and the pen strokes; <strong>photos are not uploaded</strong>.</li>
+<li>If you turn on <em>Automatic daily backup</em> (Settings → Cloud Backup), your notes are backed up once a day. You can turn it off at any time.</li>
+<li><em>Export notes (file)</em> creates a file (notes and photos) in a location you choose on your device. This file is never sent to us.</li>
 <li>Security rules ensure that <strong>only you</strong> can read or write your data; no other user can access it.</li>
 <li>All data is encrypted in transit (HTTPS/TLS).</li>
 </ul>
@@ -89,6 +92,8 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <li><strong>Exact alarms (Android 12+):</strong> on-time reminders (if not granted, reminders may arrive a few minutes late)</li>
 <li><strong>Run at startup:</strong> restoring your reminders after the device restarts</li>
 <li><strong>Internet:</strong> loading ads and cloud backup</li>
+<li><strong>Photos and camera:</strong> photos are chosen with the Android photo picker and taken with your camera app. MyNotes does not request access to your photo library or camera; it only receives the photos you pick or take.</li>
+<li><strong>Fingerprint / screen lock:</strong> used through Android for unlocking locked notes and the app lock. MyNotes never receives or stores your fingerprint.</li>
 </ul>
 <p>Denying a permission only disables the related feature; all other functions keep working.</p>
 
@@ -96,6 +101,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <ul>
 <li>Local data is stored in Android's private app storage (DataStore).</li>
 <li><strong>Locked notes:</strong> the content of a locked note is encrypted with AES-256-GCM using a key derived from your PIN (PBKDF2). It stays encrypted on the device and in cloud backups. Note titles are not encrypted so they can be shown in lists.</li>
+<li><strong>Locked drawing notes:</strong> the PIN is required to open the note and its text is encrypted, but its photos and pen strokes are not encrypted.</li>
 <li>We do not sell or rent your data to any third parties.</li>
 </ul>
 
@@ -112,7 +118,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <!-- ============================== TÜRKÇE ============================== -->
 <section id="tr" lang="tr">
 <h1>MyNotes – Gizlilik Politikası</h1>
-<p class="meta">MyNotes v1.1.2 · Son güncelleme: Ekim 2026</p>
+<p class="meta">MyNotes v1.3.0 · Son güncelleme: Ekim 2026</p>
 
 <h2>📄 Genel Bakış</h2>
 <p>AET Studio tarafından geliştirilen <strong>MyNotes</strong> uygulamasını kullandığınız için teşekkür ederiz. Bu Gizlilik Politikası, uygulamanın hangi verileri topladığını, bunları nasıl kullandığını ve kişisel verilerinizi nasıl koruduğumuzu açıklar. Lütfen uygulamayı kullanmadan önce dikkatlice okuyun.</p>
@@ -126,6 +132,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <tr><td>Yedeklenen notlar ve listeler</td><td>Cihazlarınız arasında yedekleme ve eşitleme (isteğe bağlı)</td><td>Google Cloud Firestore</td></tr>
 <tr><td>Reklam kimliği (GAID), cihaz bilgileri, yaklaşık konum (IP'den), reklam etkileşimleri</td><td>Reklam gösterimi ve ölçümü</td><td>Google AdMob</td></tr>
 <tr><td>Satın alma geçmişi</td><td>"Reklamları Kaldır" satın alımı</td><td>Google Play</td></tr>
+<tr><td>Çizim notlarına eklediğiniz fotoğraflar</td><td>Fotoğrafların notta gösterilmesi</td><td>Yalnızca cihazınızda (hiçbir yere yüklenmez)</td></tr>
 </table></div>
 <p class="note">Bulut yedekleme tamamen isteğe bağlıdır. Google hesabınızla giriş yapıp yedekleme kullanmadığınız sürece bulutumuza hiçbir veri gönderilmez.</p>
 
@@ -168,7 +175,9 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <h2>☁️ Google Firebase ve Bulut Yedekleme</h2>
 <ul>
 <li>Google hesabınızla Firebase Authentication üzerinden giriş yaparsınız. Yalnızca e-posta adresiniz ve kullanıcı kimliğiniz saklanır.</li>
-<li>Her not, hesabınız altında Google Cloud Firestore'da ayrı bir kayıt olarak saklanır.</li>
+<li>Her not, hesabınız altında Google Cloud Firestore'da ayrı bir kayıt olarak saklanır. Çizim notlarında buna yazı ve kalem izleri dahildir; <strong>fotoğraflar yüklenmez</strong>.</li>
+<li><em>Otomatik günlük yedek</em> açıksa (Ayarlar → Hesap ve Yedekleme) notlarınız günde bir kez yedeklenir. İstediğiniz zaman kapatabilirsiniz.</li>
+<li><em>Notları dışa aktar (dosya)</em>, notlarınızı ve fotoğraflarınızı cihazınızda seçtiğiniz bir yere dosya olarak kaydeder. Bu dosya bize gönderilmez.</li>
 <li>Güvenlik kuralları sayesinde verilerinizi <strong>yalnızca siz</strong> okuyabilir ve yazabilirsiniz; başka hiçbir kullanıcı erişemez.</li>
 <li>Tüm veriler aktarım sırasında şifrelenir (HTTPS/TLS).</li>
 </ul>
@@ -179,6 +188,8 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <li><strong>Tam zamanlı alarm (Android 12+):</strong> hatırlatıcıların tam vaktinde çalması (izin verilmezse birkaç dakika gecikebilir)</li>
 <li><strong>Açılışta çalışma:</strong> cihaz yeniden başladığında hatırlatıcıların yeniden kurulması</li>
 <li><strong>İnternet:</strong> reklam yükleme ve bulut yedekleme</li>
+<li><strong>Fotoğraf ve kamera:</strong> fotoğraflar Android fotoğraf seçicisiyle seçilir ve kamera uygulamanızla çekilir. MyNotes galerinize veya kameranıza erişim izni istemez; yalnızca seçtiğiniz ya da çektiğiniz fotoğrafı alır.</li>
+<li><strong>Parmak izi / ekran kilidi:</strong> kilitli notları ve uygulama kilidini açmak için Android üzerinden kullanılır. MyNotes parmak izinizi hiçbir zaman almaz veya saklamaz.</li>
 </ul>
 <p>Bir izni reddetmek yalnızca ilgili özelliği devre dışı bırakır; diğer tüm işlevler çalışmaya devam eder.</p>
 
@@ -186,6 +197,7 @@ section+section{margin-top:56px}footer{margin-top:48px;color:var(--muted);font-s
 <ul>
 <li>Cihazdaki veriler Android'in uygulamaya özel depolama alanında (DataStore) saklanır.</li>
 <li><strong>Kilitli notlar:</strong> kilitli notun içeriği, PIN'inizden türetilen (PBKDF2) bir anahtarla AES-256-GCM ile şifrelenir; cihazda ve bulut yedeğinde şifreli kalır. Not başlıkları listelerde görünebilmesi için şifrelenmez.</li>
+<li><strong>Kilitli çizim notları:</strong> notu açmak için PIN gerekir ve yazısı şifrelenir; fotoğrafları ve kalem izleri şifrelenmez.</li>
 <li>Verilerinizi hiçbir üçüncü tarafa satmaz veya kiralamayız.</li>
 </ul>
 
